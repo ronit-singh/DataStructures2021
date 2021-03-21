@@ -43,6 +43,12 @@ public class MyList<E> implements ListInterface<E>{
 
     /******************************************************************/
         return (head == null);
+	/* 
+        Alternatively, we can also use
+        if(cardDeck.size() == 0){
+            return true;
+        } 
+        */
     /******************************************************************/
 
 
@@ -56,6 +62,11 @@ public class MyList<E> implements ListInterface<E>{
             length++;
         }
         return length;
+	    
+	/* 
+        Alternatively, we can also use
+        return cardDeck.size();
+        */
     /******************************************************************/
 
 
@@ -75,6 +86,11 @@ public class MyList<E> implements ListInterface<E>{
             newNode.next = temp;  
             head = newNode; 
         }
+	
+	/* 
+	Alternatively, we can also use
+	cardDeck.addFirst(e);
+	*/
     /******************************************************************/
 
 
@@ -91,6 +107,11 @@ public class MyList<E> implements ListInterface<E>{
             tail.next = newNode;  
             tail = newNode;  
         }
+	    
+	/* 
+	Alternatively, we can also use
+	cardDeck.addLast(e);
+	*/
     /******************************************************************/
 
 
@@ -104,6 +125,11 @@ public class MyList<E> implements ListInterface<E>{
             head = head.getNext();
             toBeRemoved.setNext(null); 
         }
+	    
+	/* 
+	Alternatively, we can also use
+	return cardDeck.removeFirst(); 
+	*/
     /******************************************************************/
 
     }  
@@ -130,6 +156,13 @@ public class MyList<E> implements ListInterface<E>{
         }
 
     }
+	
+    /* 
+    Alternatively, we can also use
+    List<Card> list = new ArrayList<Card>(cardDeck);    // converting linked list to arraylist to use ArrayList.add() method
+    list.add(position, e);
+    List<Card> cardDeck = new LinkedList<Card>(list);   // converting back to linkedlist 
+    */
     /******************************************************************/
 
 
@@ -160,6 +193,11 @@ public class MyList<E> implements ListInterface<E>{
             current.next = null;
             return current;
         }
+	    
+	/* 
+	Alternatively, we can also use
+	return cardDeck.remove(position); 
+	*/
 
     /******************************************************************/
 
@@ -173,6 +211,10 @@ public class MyList<E> implements ListInterface<E>{
         } 
         return head.data;
         
+	/* 
+	Alternatively, we can also use
+	return cardDeck.getFirst(); 
+	*/
     /******************************************************************/
 
 
@@ -191,6 +233,11 @@ public class MyList<E> implements ListInterface<E>{
             temp = temp.next; 
         } 
         return temp.data; 
+	    
+	/* 
+	Alternatively, we can also use
+	return cardDeck.getLast();
+	*/
     /******************************************************************/
 
 
@@ -210,6 +257,11 @@ public class MyList<E> implements ListInterface<E>{
         }
         // if we get to this line, the caller was asking for a non-existent element
         return 0;
+	    
+	/* 
+	Alternatively, we can also use
+	return cardDeck.get(position);
+	*/
     /******************************************************************/
 
 
