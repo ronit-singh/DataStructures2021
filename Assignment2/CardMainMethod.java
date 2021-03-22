@@ -33,7 +33,22 @@ public class CardMainMethod {
                 d.isEmpty();
 
                 MyList ml = new MyList();
-                ml.isEmpty();
+                if(!ml.isEmpty()){
+                    if(deck1.size()>0){
+                        ml.addFirst(E e);
+                    }
+                    else{
+                        System.out.println("Player 2 is winner!");
+                        break;
+                    }
+                    if(deck2.size()>0){
+                        ml.addFirst(E e);
+                    }
+                    else{
+                        System.out.println("Player 1 is winner!");
+                        break;
+                    }
+                }
                 ml.numElem();
                 ml.addFirst(E e);
                 ml.addLast(E e);
